@@ -2,19 +2,20 @@
                        REGLAS SINTACTICAS
 *******************************************************************
 1) <programa> ::= {<sentencia>}{<FIN>}
+   <FIN> ::= z_ptocoma
 
 2) <función_imprimir> ::= z_imprimir<mensaje><FIN>
-<mensaje> ::= z_abreparentesisz_cadenaz_cierraparentesis
+<mensaje> ::= z_abreparentesis z_cadena z_cierraparentesis
 
-3) <operación_suma> ::= [z_numz_decimal] z_mas [z_numz_decimal]<FIN>
+3) <operación_suma> ::= [z_num z_decimal] z_mas [z_num z_decimal]<FIN>
 
-4) <operación_menos> ::= [z_numz_decimal] z_menos [z_numz_decimal]<FIN>
+4) <operación_menos> ::= [z_num z_decimal] z_menos [z_num z_decimal]<FIN>
 
-5) <operación_por> ::= [z_numz_decimal] z_por [z_numz_decimal]<FIN>
+5) <operación_por> ::= [z_num z_decimal] z_por [z_num z_decimal]<FIN>
 
-6) <operación_division> ::= [z_numz_decimal] z_entre [z_numz_decimal]<FIN>
+6) <operación_division> ::= [z_num z_decimal] z_entre [z_num z_decimal]<FIN>
 
-7) <operación_potencia> ::= [z_numz_decimal] z_potencia[z_numz_decimal] <FIN>
+7) <operación_potencia> ::= [z_num z_decimal] z_potencia[z_num z_decimal] <FIN>
 
 8) <raíz_cuadrada> ::= z_sqrt z_abreparentesis z_num z_cierraparentesis<FIN>
 
@@ -68,7 +69,7 @@
 
 27)<funciones_trigonometricas> ::= [<seno><coseno><tangente><cotangente><secante><cosecante>]
 
-28)<tipo_dato> ::= [z_boolz_doblez_realz_complejoz_flotantez_largoz_cortoz_tcadenaz_tchar]
+28)<tipo_dato> ::= [z_bool z_doblez_real z_complejo z_flotante z_largo z_corto z_tcadena z_tchar]
 
 29) <letra> ::= a | b | c | d | e | f | g | h | i | j | k | l | m | n | ñ | o | p | q | r | s | t | u | v | w | x | y | z | A | B | C | D | E |F | G | H | I | J | K | L | M | N | Ñ | O | P | Q | R | S | T | U | V | W | X | Y | Z
 
@@ -76,7 +77,8 @@
 
 31) <factorial> ::= <digito>z_factorial<FIN>
 
-32) <comentario> ::= z_comentario z_char
+32) <comentario> ::= z_comentario [z_char <otro_char>]
+    <otro_char>  ::= z_char | z_char <otro_char>
 
 33) <si> ::= z_si<expresión_booleana>z_abrellave<sentencia>z_cierrallave | z_si<expresión_booleana>z_abrellave<sentencia>z_cierrallave
 sinoz_abrellave<sentencia>z_cierrallave
@@ -92,24 +94,25 @@ z_mientras<expresión_booleana>z_abrellave<sentencia>z_cierrallave
 
 38) <cantidad_caracteres> ::= z_cant_num z_abreparentesisz_caracterz_cierraparentesis<FIN>
 
-39) <función_leer> ::=z_leerz_abreparentesisz_cierraparentesis<FIN>
+39) <función_leer> ::= z_leer z_abreparentesis z_cierraparentesis<FIN>
 
-40) <numero_complejo> ::=z_num + <bi>
-<bi> ::= z_numî
+40) <numero_complejo> ::= z_num z_mas <bi>
+<bi> ::= z_num î
 
-41) <desde> ::=z_desdez_numz_hastaz_numz_abrellave<sentencia>z_cierrallave
+41) <desde> ::= z_desdez_numz_hastaz_numz_abrellave<sentencia>z_cierrallave
 
-42) <salida_dato> ::=z_salidaz_caracter<FIN>
+42) <salida_dato> ::= z_salidaz_caracter<FIN>
 
-43) <entrada_dato> ::=z_entradaz_caracter<FIN>
+43) <entrada_dato> ::= z_entradaz_caracter<FIN>
 
-44) <variable> ::=<tipo_dato>z_caracter<FIN>
+44) <variable> ::= <tipo_dato>z_caracter z_asignacion [<numero_complejo> z_num z_decimal z_cadena z_caracter]<FIN>
 
-45) <contantes> ::=z_constante<declarar_constante>
-<declarar_constante>::=<tipo_dato>z_asignacion[z_numz_cadenaz_caracter]<FIN>
+45) <contantes> ::= z_constante<declarar_constante>
+<declarar_constante>::=<tipo_dato>z_caracter z_asignacion[z_num z_cadena z_caracter <numero_complejo>]<FIN>
 
 46) <para> ::=z_para z_abreparentesis<contantes>z_cierraparentesis
 z_abrellave<sentencia>z_cierrallave
+
 47) <estructura> ::=z_estructura z_caracter z_abrellave
 <Declara_variable>
 z_cierrallave
@@ -130,12 +133,12 @@ z_abrellave<sentencia>z_cierrallave
 
 52) <funciones_log> ::= [<logaritmo><logaritmo_natural><cologaritmo><antilogaritmo>]
 
-53) <funciones_math> ::= [<funciones_log><funciones_trigonometricas><cantidad_num>]
+53) <funciones_math> ::= [<funciones_log><funciones_trigonometricas><cantidad_num><raíz_cuadrada>]
 
 54) <convertir> ::=z_convertir<tipo_dato>z_abreparentesis
 [<variable><contantes>] z_cierraparentesis<FIN>
 
-55) <funciones_sistema> ::= [<función_leer><cerrar_consola><funciones_math><cantidad_caracteres><convertir>]
+55) <funciones_sistema> ::= [<función_leer><cerrar_consola><funciones_math><cantidad_caracteres><convertir><función_imprimir>]
 
 56) <suma_complejos> ::=<numero_complejo> z_mas <numero_complejo><FIN>
 
