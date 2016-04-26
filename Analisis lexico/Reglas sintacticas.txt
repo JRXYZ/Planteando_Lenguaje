@@ -1,0 +1,156 @@
+*******************************************************************
+                       REGLAS SINTACTICAS
+*******************************************************************
+1) <programa> ::= {<sentencia>}{<FIN>}
+
+2) <función_imprimir> ::= z_imprimir<mensaje><FIN>
+<mensaje> ::= z_abreparentesisz_cadenaz_cierraparentesis
+
+3) <operación_suma> ::= [z_numz_decimal] z_mas [z_numz_decimal]<FIN>
+
+4) <operación_menos> ::= [z_numz_decimal] z_menos [z_numz_decimal]<FIN>
+
+5) <operación_por> ::= [z_numz_decimal] z_por [z_numz_decimal]<FIN>
+
+6) <operación_division> ::= [z_numz_decimal] z_entre [z_numz_decimal]<FIN>
+
+7) <operación_potencia> ::= [z_numz_decimal] z_potencia[z_numz_decimal] <FIN>
+
+8) <raíz_cuadrada> ::= z_sqrt z_abreparentesis z_num z_cierraparentesis<FIN>
+
+9) <logaritmo> ::= z_log z_abreparentesis z_num z_cierraparentesis<FIN>
+
+10) <logaritmo_natural> ::= z_log z_abreparentesis z_num z_cierraparentesis<FIN>
+
+11) <cologaritmo> ::= z_colog z_abreparentesis z_num z_cierraparentesis<FIN>
+
+12) <antilogaritmo> ::= antlog z_abreparentesis z_num z_cierraparentesis<FIN>
+
+13) <valor_absoluto> ::= z_valorabs z_num z_valorabs <FIN>
+
+14) <raiz_general> ::= z_num z_potencia<fraccion><FIN>
+<fraccion> ::= z_abreparentesis z_num / z_numcierra_parentesis
+
+15)<operaciones_aritmeticas>::= [<operación_suma><operación_menos><operación_por><operación_division><operación_potencia><raiz_general><valor_absoluto>]
+
+16) <expresion_booleana> ::=
+{<operador_not>}<expresión_p>{<operador_and_or>}{<operación_booleana>}
+<operador_not> ::=  z_not|<operador_not>
+<operador_and_or> ::= z_or | z_and
+<expression_p> ::= [<comparacion>]
+<comparacion> ::=  [z_numz_variable z_decimal]<expresion_comparacion>[z_numz_variablez_decimal]
+<expresion_comparacion> ::= z_mayor | z_menor | z_menor_igual |z_mayor_igual|z_igual
+
+17)<diccionario> ::= z_diccionario z_igual z_abrecorchete<elementos_dic>z_cierracorchete<FIN>
+<elementos_dic>::=<llave> z_dos_ptos<elemento_dic>
+<llave> ::= z_cadena
+<elemento_dic> ::= [z_cadenaz_numz_caracterz_constante]
+
+18) <tupla> ::=z_tupla z_igual z_abreparentesis<elementos_tu>z_cierraparentesis<FIN>
+<elementos_tu>::= [z_cadena z_num z_caracterz_constante] {z_coma} {<elementos_tu>}
+
+19) <lista> ::= z_lista z_igual z_abreparentesis<elementos_li>z_cierraparentesis<FIN>
+<elementos_tu> ::= [z_cadena z_num z_caracter z_constante] {z_coma} {<elementos_tu>}
+
+20) <arreglos> ::= [<diccionario><tupla><lista>]
+
+21) <seno> ::= z_seno z_abreparentesis[z_num]z_cierraparentesis<FIN>
+
+22) <coseno> ::= z_coseno z_abreparentesis z_num z_cierraparentesis<FIN>
+
+23) <tangente> ::= z_tangentez_abreparentesis z_num z_cierraparentesis<FIN>
+
+24) <cotangente> ::= z_cotangente z_abreparentesis z_num z_cierraparentesis<FIN>
+
+25) <secante> ::= z_secante z_abreparentesis z_num z_cierraparentesis<FIN>
+
+26) <cosecante> ::= z_cosecante z_abreparentesis z_num z_cierraparentesis<FIN>
+
+27)<funciones_trigonometricas> ::= [<seno><coseno><tangente><cotangente><secante><cosecante>]
+
+28)<tipo_dato> ::= [z_boolz_doblez_realz_complejoz_flotantez_largoz_cortoz_tcadenaz_tchar]
+
+29) <letra> ::= a | b | c | d | e | f | g | h | i | j | k | l | m | n | ñ | o | p | q | r | s | t | u | v | w | x | y | z | A | B | C | D | E |F | G | H | I | J | K | L | M | N | Ñ | O | P | Q | R | S | T | U | V | W | X | Y | Z
+
+30)  <digito> ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
+
+31) <factorial> ::= <digito>z_factorial<FIN>
+
+32) <comentario> ::= z_comentario z_char
+
+33) <si> ::= z_si<expresión_booleana>z_abrellave<sentencia>z_cierrallave | z_si<expresión_booleana>z_abrellave<sentencia>z_cierrallave
+sinoz_abrellave<sentencia>z_cierrallave
+
+34) <mientras> ::=z_mientras<expresión_booleana>z_abrellave<sentencia>z_cierrallave
+
+35) <cantidad_num> ::= z_cant_num z_abreparentesis [z_num] z_cierraparentesis<FIN>
+
+36) <cerrar_consola> ::= z_chao z_abreparentesis z_cierraparentesis<FIN>
+
+37) <hacer_mientras> ::= z_hacer z_abrellave<sentencia> z_cierrallave
+z_mientras<expresión_booleana>z_abrellave<sentencia>z_cierrallave
+
+38) <cantidad_caracteres> ::= z_cant_num z_abreparentesisz_caracterz_cierraparentesis<FIN>
+
+39) <función_leer> ::=z_leerz_abreparentesisz_cierraparentesis<FIN>
+
+40) <numero_complejo> ::=z_num + <bi>
+<bi> ::= z_numî
+
+41) <desde> ::=z_desdez_numz_hastaz_numz_abrellave<sentencia>z_cierrallave
+
+42) <salida_dato> ::=z_salidaz_caracter<FIN>
+
+43) <entrada_dato> ::=z_entradaz_caracter<FIN>
+
+44) <variable> ::=<tipo_dato>z_caracter<FIN>
+
+45) <contantes> ::=z_constante<declarar_constante>
+<declarar_constante>::=<tipo_dato>z_asignacion[z_numz_cadenaz_caracter]<FIN>
+
+46) <para> ::=z_para z_abreparentesis<contantes>z_cierraparentesis
+z_abrellave<sentencia>z_cierrallave
+47) <estructura> ::=z_estructura z_caracter z_abrellave
+<Declara_variable>
+z_cierrallave
+<Declara_variable>::=<variable><FIN>{<Declara_variable>}
+
+48) <switch> ::=z_switch z_abreparentesis<variable>z_cierraparentesis
+z_abrellave<casos><caso_contrario>z_cierrallave
+<casos> ::= z_caso<ncaso>z_dos_ptos<sentencia>
+<ncaso> ::= z_num
+<caso_contrario>::=z_caso_contrarioz_dos_ptos<sentencia>
+
+49) <goto> ::=z_ir<sentencia>
+
+50) <funcion> ::=z_funcionz_abreparentesisz_cierraparentesis
+z_abrellave<sentencia>z_cierrallave
+
+51) <instrucciones_control> ::= [<si><mientras><desde><para><switch><goto><hacer_mientras>]
+
+52) <funciones_log> ::= [<logaritmo><logaritmo_natural><cologaritmo><antilogaritmo>]
+
+53) <funciones_math> ::= [<funciones_log><funciones_trigonometricas><cantidad_num>]
+
+54) <convertir> ::=z_convertir<tipo_dato>z_abreparentesis
+[<variable><contantes>] z_cierraparentesis<FIN>
+
+55) <funciones_sistema> ::= [<función_leer><cerrar_consola><funciones_math><cantidad_caracteres><convertir>]
+
+56) <suma_complejos> ::=<numero_complejo> z_mas <numero_complejo><FIN>
+
+57) <resta_complejo> ::=<numero_complejo> z_menos <numero_complejo><FIN>
+
+58) <multiplicacion_complejo> ::=<numero_complejo> z_por <numero_complejo><FIN>
+
+59) <division_complejo> ::=<numero_complejo> z_entre <numero_complejo><FIN>
+
+60) <operaciones_complejos> ::= [<suma_complejos><resta_complejo><multiplicacion_complejo><division_complejo>]
+
+61) <operaciones_numericas> ::= [<operaciones_complejos><operaciones_aritmeticas><factorial>]
+
+62) <entra_salida> ::= [entrada_datossalida_datos]
+
+63) <sentencia> ::= [<funciones_sistema><operaciones_numericas><entra_salida><arreglos><comentario><variable><constante><estructura><funcion><instrucciones_control><funciones_sistema>
+
+

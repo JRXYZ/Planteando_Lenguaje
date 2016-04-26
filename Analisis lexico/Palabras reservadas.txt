@@ -1,0 +1,172 @@
+*******************************************************************
+                       PALABRAS RESERVADAS
+*******************************************************************
+
+1)	z_comentario → Los comentarios empezaran por el signo de # , solo sera considerado como comentario si la linea empieza con dicho carácter es presedido con espacio o tabuladores.No existe comentario multilinea.
+
+2)	z_cadena → “secuencia de caracteres”.
+
+3)	z_variable → Las variables son identificadores asociados a valores.
+
+4)	z_constante → Cuando se declara una constante, tambien se debe asignar el valor forzosamente. Las constantes se deben declarar en minusculas.
+
+5)	z_si → evalua una condicion y si el resultado es verdadero ejecuta las instrucciones a continuación.
+
+6)	z_sino → si ejecuta cuando p_si  resulta falso.
+
+7)	z_desde → hace que una instrucción o bloque de instrucciones se repitan desde una valor inicial hasta uno final.
+
+8)	z_hasta → pone limite al  p_desde.
+
+9)	z_mientras → hace que una instrucción o bloque de instrucciónes se repitan.
+
+10)	z_hacer → hace que una instrucción se ejecute.
+
+11)	z_funcion → consiste generalmente de una serie de sentencias para llevar a cabo una accion.
+
+12)	z_int → se representa en intervalo de -2.147.483.648 a +2.147.483.648 , ambos inclusive.
+
+13)	z_bool → es un valor que puede tener dos valores verdadero o falso.
+
+14)	z_doble → representa un numero de 64 bits de precisiondoble .
+
+15)	z_real → son los valores que contienen decimales  ±2,2250738585072020 x 10-308 hasta ±1,7976931348623157×10308
+
+16)	z_complejo → son valores que tienen una parte real y una imaginaria.
+
+17)	z_ptocoma → secuencia de caracteres ;
+
+18)	z_retornar → devuelve el valor de una función.
+
+19)	z_ir → la instrucción p_ir transfiere el control del programa directamente a una instrucción identificada por una etiqueta.
+
+20)	z_entrada → permite la entrada de los datos.
+
+21)	z_salida → permite la salida de los datos.
+
+22)	z_caso → indica el caso n en una sentencia switch.
+
+23)	z_switch → sentencia se utiliza para tomar decisiones multiples.
+
+24)	z_caso_contrario → se usa para valores o correspondientes a los anteriores.
+
+25)	z_sqrt → devuelve la raíz cuadrada de un entero.
+
+26)	z_convertir → Cambia un tipo de dato a otro.
+
+27)	z_abrellave → secuencia de caracteres {
+
+28)	z_cierrallave → secuencia de caracteres }
+
+29)	z_abreparentesis → secuencia de caracteres (
+
+30)	z_cierraparentesis → secuencia de caracteres )
+
+31)	z_abrecorchete → secuencia de caracteres [
+
+32)	z_cierracorchete → secuencia de caracteres ]
+
+33)	z_principal → indica la función principal.
+
+34)	z_asignacion → secuencia de caracteres ===
+
+35)	z_imprimir → imprime una cadena de caracteres.
+
+36)	z_salto → realiza un salto de línea
+
+37)	z_estructura → te crea una estructura
+
+38)	z_flotante → es un tipo de dato numérico que va desde  -3.4 × 1038 a +3.4 × 1038
+
+39)	z_largo → un tipo de dato numérico que va desde –9.223.372.
+036.854.775.808 a 9.223.372.036.854.775.80
+
+40)	z_corto → un tipo de dato numérico que va desde -32.768 a 32.767
+
+41)	z_lista →  define una lista.
+
+42)	z_diccionario → define un diccionario.
+
+43)	z_tupla → define una tupla.
+
+44)	z_chao → cierra la consola.
+
+45)	z_caracter → Valor ingresado por teclado que se una termino no definido.
+
+46)	z_num → Cadena de caracteres numéricos.
+
+47)	z_decimal → Numeros decimales.
+
+48)	z_leer → Permite que se lea el código en la consola.
+
+49)	z_tcadena → Indica que el tipo de dato es una cadena.
+
+50)	z_tchar → Indica que el tipo de dato es un carácter.
+
+51)	z_coma → secuencia de caracteres,
+
+52)	z_dos_ptos → secuencia de caracteres:
+
+53)	z_potencia → Operador aritmético potencia.
+
+54)	z_and → operador lógico AND.
+
+55)	z_not → operador lógico NOT.
+
+56)	z_or → operador lógico OR.
+
+57)	z_para → Inicio del ciclo para, dará la cantidad de vueltas de acuerdo al rango asignado.
+
+58)	z_seno → Resuelve el seno de un angulo en grados sexagesimales.
+
+59)	z_coseno → Resuelve el coseno de un angulo en grados sexagesimales.
+
+60)	z_secante → Resuelve la secante de un angulo en grados sexagesimales.
+
+61)	z_cosecante → Resuelve el cosecante de un angulo en grados sexagesimales.
+
+62)	z_tangente → Resuelve la tangente de un angulo en grados sexagesimales.
+
+63)	z_cotangente → Resuelve la cotangente de un angulo en grados sexagesimales.
+
+64)	z_log → Resuelve el logaritmo del número pasado por parámetro.
+
+65)	z_ln → Resuelve el logaritmo neperiano del número pasado por parámetro.
+
+66)	z_colog → Resuelve el cologaritmo del número pasado por parámetro.
+
+67)	z_antlog → Resuelve el antilogaritmo del número pasado por parámetro
+
+68)	z_true→ Indica el valor verdadero de la variable del tipo booleano.
+
+69)	z_false → Indica el valor falso de la variable del tipo booleano.
+
+70)	z_cant_caracteres → Nos sirve  para verificar la cantidad de caracteres.
+
+71)	z_cant_num → Se encarga de mostrar la cantidad  de números.
+
+72)	z_factorial→Resuelve el factorial de un número.
+
+73)	î  → Unidad imaginaria.
+
+74)	z_valorabs →  Valor absoluto de un z_num.
+
+75) z_igual → Caracter =
+
+76) z_mayor → Caracter >
+
+77) z_menor → Caracter <
+
+78) z_menor_igual → Caracter <=
+
+79) z_mayor_igual → Caracter >=
+
+80) z_mas → Caracter +
+
+81) z_menos → Caracter -
+
+82) z_por → Caracter *
+
+83) z_entre → Caracter /
+
+
